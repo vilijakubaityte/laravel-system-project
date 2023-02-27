@@ -19,7 +19,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/owners', [OwnersController::class, 'owners'])->name("owners.list");
 Route::get('/owner/create', [OwnersController::class, 'create'])->name("owners.create");
