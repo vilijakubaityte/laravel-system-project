@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">Automobiliai</div>
                     <div class="card-body">
-                        <a href="{{ route("cars.create") }}" class="btn btn-success float-end">Pridėti automobilį:</a>
+                        <a href="{{ route("cars.create") }}" class="btn btn-success float-end">Pridėti naują automobilį</a>
                         <table class="table">
                             <thead>
                             <tr>
