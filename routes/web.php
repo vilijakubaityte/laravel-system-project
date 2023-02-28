@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OwnersController;
+use App\Http\Controllers\CarsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,5 +25,5 @@ Route::get('/owners/{id}/update', [OwnersController::class, 'update'])->name("ow
 Route::post('/owners/{id}/save', [OwnersController::class, "save"])->name("owners.save");
 Route::get('/owners/{id}/destroy', [OwnersController::class, "delete"])->name("owners.delete");
 
-
+Route::resource('cars', CarsController::class);
 
