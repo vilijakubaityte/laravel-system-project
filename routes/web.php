@@ -13,9 +13,6 @@ use App\Http\Controllers\OwnersController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
