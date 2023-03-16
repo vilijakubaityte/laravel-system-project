@@ -9,6 +9,20 @@
                     <div class="card-header">Automobilių savininkai</div>
                     <div class="card-body">
                         <a href="{{ route("owners.create") }}" class="btn btn-success float-end">Pridėti naują savininką</a>
+                        <form method="post" action="{{ route('owners.search') }}">
+                            @csrf
+                                <div class="mb-3 col-md-6">
+                                <label class="form-label">Savininko paieška</label>
+                                <input class="form-control" type="text" name="search">
+                                </div>
+                            <button class="btn btn-success">Paieška</button>
+                        </form>
+                        <form class="mt-2" method="post" action="{{ route("owners.forget") }}">
+                            @csrf
+                            <button class="btn btn-secondary">Išvalyti paiešką</button>
+                        </form>
+                            </div>
+                        <hr>
                         <table class="table">
                             <thead>
                             <tr>
@@ -44,3 +58,4 @@
         </div>
     </div>
 @endsection
+
